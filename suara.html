@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suara Binatang – Belajar Binatang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🐾 Belajar Binatang</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+        <li><a href="permainan.html">Permainan</a></li>
+        <li><a href="flashcard.html">Flashcard</a></li>
+        <li><a href="penilaian.html">Penilaian</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <div class="page-header">
+      <h1>🔊 Suara Binatang</h1>
+      <p>Klik gambar binatang untuk mendengar suaranya, lalu tirukan!</p>
+    </div>
+
+    <!-- CATATAN: Ganti URL di data-src dengan file MP3 asli dari folder assets/audio/ -->
+    <!-- Link download suara gratis ada di README.md -->
+    <div class="suara-grid">
+      <div class="suara-card" onclick="playSound('kucing', this)">
+        <span class="emoji">🐱</span>
+        <div class="nama">Kucing</div>
+        <div class="suara-text">"Meong!"</div>
+        <!-- <audio id="kucing" src="assets/audio/kucing.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('anjing', this)">
+        <span class="emoji">🐶</span>
+        <div class="nama">Anjing</div>
+        <div class="suara-text">"Guk guk!"</div>
+        <!-- <audio id="anjing" src="assets/audio/anjing.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('sapi', this)">
+        <span class="emoji">🐄</span>
+        <div class="nama">Sapi</div>
+        <div class="suara-text">"Mooo!"</div>
+        <!-- <audio id="sapi" src="assets/audio/sapi.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('ayam', this)">
+        <span class="emoji">🐓</span>
+        <div class="nama">Ayam</div>
+        <div class="suara-text">"Kukuruyuk!"</div>
+        <!-- <audio id="ayam" src="assets/audio/ayam.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('katak', this)">
+        <span class="emoji">🐸</span>
+        <div class="nama">Katak</div>
+        <div class="suara-text">"Kwek kwek!"</div>
+        <!-- <audio id="katak" src="assets/audio/katak.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('gajah', this)">
+        <span class="emoji">🐘</span>
+        <div class="nama">Gajah</div>
+        <div class="suara-text">"Preet!"</div>
+        <!-- <audio id="gajah" src="assets/audio/gajah.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('bebek', this)">
+        <span class="emoji">🦆</span>
+        <div class="nama">Bebek</div>
+        <div class="suara-text">"Kwek kwek!"</div>
+        <!-- <audio id="bebek" src="assets/audio/bebek.mp3"></audio> -->
+      </div>
+
+      <div class="suara-card" onclick="playSound('kambing', this)">
+        <span class="emoji">🐐</span>
+        <div class="nama">Kambing</div>
+        <div class="suara-text">"Embek!"</div>
+        <!-- <audio id="kambing" src="assets/audio/kambing.mp3"></audio> -->
+      </div>
+    </div>
+
+    <!-- INFO UNTUK GURU -->
+    <div class="section bg-light" style="margin: 0 32px 32px; padding: 20px">
+      <h2
+        class="section-title"
+        style="font-size: 15px; text-align: left; margin-bottom: 10px"
+      >
+        📌 Catatan untuk Guru
+      </h2>
+      <p style="font-size: 13px; color: #555; line-height: 1.7">
+        File audio bisa didownload gratis dari
+        <strong>freesound.org</strong> atau <strong>zapsplat.com</strong>.
+        Simpan dengan nama seperti <code>kucing.mp3</code> di folder
+        <code>assets/audio/</code>, lalu hapus tanda komentar pada tag
+        &lt;audio&gt; di file <code>suara.html</code>. Untuk sementara, halaman
+        ini menampilkan teks suara dan emoji sebagai panduan guru untuk
+        mencontohkan suara binatang kepada anak.
+      </p>
+    </div>
+
+    <footer class="footer">
+      <p>
+        🌿 Belajar Binatang · RA Aswaja Besole · Ina Ria Fitriani · UT Malang
+        2026
+      </p>
+    </footer>
+
+    <script src="assets/js/suara.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

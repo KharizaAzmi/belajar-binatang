@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard Binatang – Belajar Binatang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🐾 Belajar Binatang</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+        <li><a href="permainan.html">Permainan</a></li>
+        <li><a href="flashcard.html" class="active">Flashcard</a></li>
+        <li><a href="penilaian.html">Penilaian</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <div class="page-header">
+      <h1>🃏 Flashcard Digital Binatang</h1>
+      <p>Klik kartu untuk melihat informasi binatangnya!</p>
+    </div>
+
+    <div class="flashcard-container">
+      <p class="flashcard-hint">👆 Klik kartu untuk balik!</p>
+
+      <div class="flashcard-wrapper" onclick="flipCard()">
+        <div class="flashcard" id="flashcard">
+          <div class="card-front">
+            <div class="animal-emoji" id="cardEmoji">🐘</div>
+            <div class="animal-name" id="cardName">Gajah</div>
+          </div>
+          <div class="card-back">
+            <div class="animal-info" id="cardInfo">
+              <strong>Gajah 🐘</strong>
+              Tempat hidup: Darat 🌿<br />
+              Makanan: Rumput, daun, buah<br />
+              Suara: "Preet!"<br />
+              Fakta: Hewan darat terbesar di dunia!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard-nav">
+        <button class="btn-nav" onclick="prevCard()">◀</button>
+        <span class="flashcard-counter" id="cardCounter">1 / 10</span>
+        <button class="btn-nav" onclick="nextCard()">▶</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        🌿 Belajar Binatang · RA Aswaja Besole · Ina Ria Fitriani · UT Malang
+        2026
+      </p>
+    </footer>
+
+    <script src="assets/js/flashcard.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

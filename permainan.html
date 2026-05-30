@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permainan Cocokkan – Belajar Binatang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🐾 Belajar Binatang</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+        <li><a href="permainan.html" class="active">Permainan</a></li>
+        <li><a href="flashcard.html">Flashcard</a></li>
+        <li><a href="penilaian.html">Penilaian</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <div class="page-header">
+      <h1>🎮 Cocokkan Binatang dengan Tempat Hidupnya</h1>
+      <p>Seret binatang ke kotak yang sesuai dengan tempat hidupnya!</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-instructions">
+        🖱️ <strong>Cara main:</strong> Klik dan seret nama binatang ke kotak
+        tempat hidupnya yang benar!
+      </div>
+
+      <div class="game-board">
+        <!-- KOLOM KIRI: Binatang untuk diseret -->
+        <div class="drag-source">
+          <h3>🐾 Binatang</h3>
+          <div id="sourceList">
+            <div
+              class="draggable-item"
+              draggable="true"
+              data-animal="Kucing"
+              data-habitat="darat"
+              ondragstart="onDragStart(event)"
+              ontouchstart="onTouchStart(event)"
+              ontouchmove="onTouchMove(event)"
+              ontouchend="onTouchEnd(event)"
+            >
+              🐱 Kucing
+            </div>
+            <div
+              class="draggable-item"
+              draggable="true"
+              data-animal="Ikan"
+              data-habitat="air"
+              ondragstart="onDragStart(event)"
+              ontouchstart="onTouchStart(event)"
+              ontouchmove="onTouchMove(event)"
+              ontouchend="onTouchEnd(event)"
+            >
+              🐟 Ikan
+            </div>
+            <div
+              class="draggable-item"
+              draggable="true"
+              data-animal="Elang"
+              data-habitat="udara"
+              ondragstart="onDragStart(event)"
+              ontouchstart="onTouchStart(event)"
+              ontouchmove="onTouchMove(event)"
+              ontouchend="onTouchEnd(event)"
+            >
+              🦅 Elang
+            </div>
+            <div
+              class="draggable-item"
+              draggable="true"
+              data-animal="Sapi"
+              data-habitat="darat"
+              ondragstart="onDragStart(event)"
+              ontouchstart="onTouchStart(event)"
+              ontouchmove="onTouchMove(event)"
+              ontouchend="onTouchEnd(event)"
+            >
+              🐄 Sapi
+            </div>
+            <div
+              class="draggable-item"
+              draggable="true"
+              data-animal="Hiu"
+              data-habitat="air"
+              ondragstart="onDragStart(event)"
+              ontouchstart="onTouchStart(event)"
+              ontouchmove="onTouchMove(event)"
+              ontouchend="onTouchEnd(event)"
+            >
+              🦈 Hiu
+            </div>
+            <div
+              class="draggable-item"
+              draggable="true"
+              data-animal="Burung"
+              data-habitat="udara"
+              ondragstart="onDragStart(event)"
+              ontouchstart="onTouchStart(event)"
+              ontouchmove="onTouchMove(event)"
+              ontouchend="onTouchEnd(event)"
+            >
+              🐦 Burung
+            </div>
+          </div>
+        </div>
+
+        <!-- KOLOM KANAN: Zona drop -->
+        <div class="drop-target">
+          <h3>🏠 Tempat Hidup</h3>
+
+          <div
+            class="drop-zone"
+            id="zone-darat"
+            data-zone="darat"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"
+          >
+            <span>🌿</span>
+            <span class="zone-label">Darat — taruh di sini</span>
+          </div>
+
+          <div
+            class="drop-zone"
+            id="zone-air"
+            data-zone="air"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"
+          >
+            <span>💧</span>
+            <span class="zone-label">Air — taruh di sini</span>
+          </div>
+
+          <div
+            class="drop-zone"
+            id="zone-udara"
+            data-zone="udara"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"
+          >
+            <span>☁️</span>
+            <span class="zone-label">Udara — taruh di sini</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="gameResult"
+        style="
+          display: none;
+          text-align: center;
+          padding: 20px;
+          background: #e8f5e9;
+          border-radius: 16px;
+          margin-bottom: 16px;
+          font-size: 16px;
+          color: #2e7d32;
+          font-weight: 700;
+        "
+      ></div>
+
+      <button class="btn-check-game" onclick="checkGame()">
+        ✅ Periksa Jawaban
+      </button>
+      <button
+        class="btn-check-game"
+        onclick="resetGame()"
+        style="background: #888; margin-top: 10px"
+      >
+        🔄 Ulangi Permainan
+      </button>
+    </div>
+
+    <footer class="footer">
+      <p>
+        🌿 Belajar Binatang · RA Aswaja Besole · Ina Ria Fitriani · UT Malang
+        2026
+      </p>
+    </footer>
+
+    <script src="assets/js/permainan.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

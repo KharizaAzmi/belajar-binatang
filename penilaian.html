@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penilaian – Belajar Binatang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🐾 Belajar Binatang</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+        <li><a href="permainan.html">Permainan</a></li>
+        <li><a href="flashcard.html">Flashcard</a></li>
+        <li><a href="penilaian.html" class="active">Penilaian</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <div class="page-header">
+      <h1>📊 Penilaian Asesmen</h1>
+      <p>Rekap penilaian formatif dan sumatif tema Binatang – TK A</p>
+    </div>
+
+    <div class="penilaian-container">
+      <!-- JENIS ASESMEN -->
+      <h2
+        class="section-title"
+        style="font-size: 16px; text-align: left; margin-bottom: 16px"
+      >
+        📌 Jenis Asesmen
+      </h2>
+      <div class="asesmen-grid">
+        <div class="asesmen-card asesmen-formatif">
+          <div class="asesmen-header">
+            <h3>✅ Asesmen Formatif</h3>
+            <span class="asesmen-badge">Proses Pembelajaran</span>
+          </div>
+          <div class="asesmen-content">
+            <p>
+              <strong>Waktu:</strong> Selama proses pembelajaran berlangsung
+            </p>
+            <p>
+              <strong>Metode:</strong> Observasi aktivitas anak secara
+              berkelanjutan
+            </p>
+            <p>
+              <strong>Tujuan:</strong> Memantau perkembangan dan memberikan
+              feedback langsung kepada anak
+            </p>
+            <p><strong>Fokus:</strong></p>
+            <ul>
+              <li>Partisipasi aktif dalam kegiatan</li>
+              <li>Kemampuan berinteraksi dengan teman</li>
+              <li>Tingkat pemahaman konsep dasar</li>
+              <li>Sikap dan motivasi belajar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="asesmen-card asesmen-sumatif">
+          <div class="asesmen-header">
+            <h3>🎯 Asesmen Sumatif</h3>
+            <span class="asesmen-badge">Akhir Pembelajaran</span>
+          </div>
+          <div class="asesmen-content">
+            <p>
+              <strong>Waktu:</strong> Dilakukan di akhir pembelajaran (akhir
+              tema/unit)
+            </p>
+            <p><strong>Metode:</strong> Tugas/latihan praktis dan lisan</p>
+            <p>
+              <strong>Tujuan:</strong> Mengukur pemahaman anak tentang materi
+              binatang secara menyeluruh
+            </p>
+            <p><strong>Fokus:</strong></p>
+            <ul>
+              <li>Pemahaman konsep binatang darat, air, udara</li>
+              <li>Kemampuan menyebutkan nama binatang dengan benar</li>
+              <li>Kemampuan mengelompokkan binatang sesuai habitat</li>
+              <li>Sikap peduli terhadap binatang</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUGAS/LATIHAN ASESMEN -->
+      <h2
+        class="section-title"
+        style="
+          font-size: 16px;
+          text-align: left;
+          margin-bottom: 12px;
+          margin-top: 24px;
+        "
+      >
+        📝 Tugas/Latihan Asesmen
+      </h2>
+      <div class="tugas-list">
+        <div class="tugas-item">
+          <div class="tugas-nomor">1</div>
+          <div class="tugas-detail">
+            <strong>Apa nama binatang yang ada pada gambar ini?</strong>
+            <p>
+              Guru menunjukkan gambar kucing kepada anak dan anak menjawab
+              dengan lisan.
+            </p>
+            <span class="tugas-tipe">Asesmen Lisan</span>
+          </div>
+        </div>
+        <div class="tugas-item">
+          <div class="tugas-nomor">2</div>
+          <div class="tugas-detail">
+            <strong>Binatang mana yang hidup di air?</strong>
+            <p><em>Pilihan: a. Ayam &nbsp; b. Ikan &nbsp; c. Kucing</em></p>
+            <span class="tugas-tipe">Pilihan Ganda</span>
+          </div>
+        </div>
+        <div class="tugas-item">
+          <div class="tugas-nomor">3</div>
+          <div class="tugas-detail">
+            <strong>Coba tirukan suara sapi!</strong>
+            <p>Anak mendemonstrasikan kemampuan menirukan suara hewan.</p>
+            <span class="tugas-tipe">Asesmen Praktik</span>
+          </div>
+        </div>
+        <div class="tugas-item">
+          <div class="tugas-nomor">4</div>
+          <div class="tugas-detail">
+            <strong>Sebutkan dua binatang yang bisa terbang!</strong>
+            <p>
+              Anak menjawab dengan lisan atau menunjukkan gambar binatang yang
+              dapat terbang.
+            </p>
+            <span class="tugas-tipe">Asesmen Lisan</span>
+          </div>
+        </div>
+        <div class="tugas-item">
+          <div class="tugas-nomor">5</div>
+          <div class="tugas-detail">
+            <strong>Bagaimana cara kita menyayangi binatang?</strong>
+            <p>
+              Guru menanyakan sikap dan perilaku yang baik terhadap binatang
+              berdasarkan pemahaman anak.
+            </p>
+            <span class="tugas-tipe">Asesmen Lisan & Sikap</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KETERANGAN NILAI -->
+      <h2
+        class="section-title"
+        style="font-size: 16px; text-align: left; margin-bottom: 12px"
+      >
+        📌 Keterangan Nilai
+      </h2>
+      <div class="keterangan-grid">
+        <div class="ket-card">
+          <div class="ket-kode" style="color: #c62828">BB</div>
+          <div class="ket-label">Belum Berkembang</div>
+        </div>
+        <div class="ket-card">
+          <div class="ket-kode" style="color: #e65100">MB</div>
+          <div class="ket-label">Mulai Berkembang</div>
+        </div>
+        <div class="ket-card">
+          <div class="ket-kode" style="color: #0d47a1">BSH</div>
+          <div class="ket-label">Berkembang Sesuai Harapan</div>
+        </div>
+        <div class="ket-card">
+          <div class="ket-kode" style="color: #2e7d32">BSB</div>
+          <div class="ket-label">Berkembang Sangat Baik</div>
+        </div>
+      </div>
+
+      <!-- INSTRUMEN PENILAIAN -->
+      <h2
+        class="section-title"
+        style="
+          font-size: 16px;
+          text-align: left;
+          margin-bottom: 12px;
+          margin-top: 24px;
+        "
+      >
+        📋 Instrumen Penilaian
+      </h2>
+      <table class="nilai-table">
+        <thead>
+          <tr>
+            <th>Aspek</th>
+            <th>Indikator</th>
+            <th>Teknik</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bahasa</td>
+            <td>Menyebutkan nama binatang dengan benar</td>
+            <td>Observasi</td>
+          </tr>
+          <tr>
+            <td>Kognitif</td>
+            <td>Mengelompokkan binatang darat, air, udara</td>
+            <td>Unjuk Kerja</td>
+          </tr>
+          <tr>
+            <td>Motorik</td>
+            <td>Menirukan gerakan binatang</td>
+            <td>Praktik</td>
+          </tr>
+          <tr>
+            <td>Sosial-Emosional</td>
+            <td>Menunjukkan sikap menyayangi binatang</td>
+            <td>Observasi</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- SOAL EVALUASI -->
+      <h2
+        class="section-title"
+        style="
+          font-size: 16px;
+          text-align: left;
+          margin-bottom: 12px;
+          margin-top: 24px;
+        "
+      >
+        📝 Soal Asesmen Sumatif
+      </h2>
+      <table class="nilai-table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Soal</th>
+            <th>Jenis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              Apa nama binatang yang ada pada gambar ini? (tunjukkan gambar
+              kucing)
+            </td>
+            <td>Lisan</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Binatang mana yang hidup di air? a. Ayam b. Ikan c. Kucing</td>
+            <td>Pilihan Ganda</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Coba tirukan suara sapi!</td>
+            <td>Praktik</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Sebutkan dua binatang yang bisa terbang!</td>
+            <td>Lisan</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Bagaimana cara kita menyayangi binatang?</td>
+            <td>Lisan</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- CONTOH REKAP NILAI -->
+      <h2
+        class="section-title"
+        style="
+          font-size: 16px;
+          text-align: left;
+          margin-bottom: 12px;
+          margin-top: 24px;
+        "
+      >
+        👧 Contoh Rekap Nilai Siswa
+      </h2>
+      <table class="nilai-table">
+        <thead>
+          <tr>
+            <th>Nama Anak</th>
+            <th>Bahasa</th>
+            <th>Kognitif</th>
+            <th>Motorik</th>
+            <th>Sosem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anak A</td>
+            <td><span class="badge-bsb">BSB</span></td>
+            <td><span class="badge-bsh">BSH</span></td>
+            <td><span class="badge-bsb">BSB</span></td>
+            <td><span class="badge-bsh">BSH</span></td>
+          </tr>
+          <tr>
+            <td>Anak B</td>
+            <td><span class="badge-bsh">BSH</span></td>
+            <td><span class="badge-mb">MB</span></td>
+            <td><span class="badge-bsh">BSH</span></td>
+            <td><span class="badge-bsh">BSH</span></td>
+          </tr>
+          <tr>
+            <td>Anak C</td>
+            <td><span class="badge-mb">MB</span></td>
+            <td><span class="badge-mb">MB</span></td>
+            <td><span class="badge-bsh">BSH</span></td>
+            <td><span class="badge-bb">BB</span></td>
+          </tr>
+          <tr>
+            <td>Anak D</td>
+            <td><span class="badge-bsb">BSB</span></td>
+            <td><span class="badge-bsb">BSB</span></td>
+            <td><span class="badge-bsb">BSB</span></td>
+            <td><span class="badge-bsb">BSB</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 12px; color: #999; margin-top: 8px">
+        * Isi tabel di atas sesuai data siswa asli di kelas.
+      </p>
+    </div>
+
+    <footer class="footer">
+      <p>
+        🌿 Belajar Binatang · RA Aswaja Besole · Ina Ria Fitriani · UT Malang
+        2026
+      </p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
