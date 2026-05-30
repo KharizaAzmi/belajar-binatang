@@ -43,16 +43,15 @@ a {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2px;
+  gap: 4px;
 }
 
 .nav-links a {
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 13px;
   color: #a5d6a7;
   transition: all 0.2s;
-  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -197,8 +196,14 @@ a {
 /* ===== CARD GRID ===== */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .card {
@@ -334,6 +339,22 @@ a {
   overflow: hidden;
   border: 1.5px solid #e0e0e0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* rasio 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px 10px 0 0;
 }
 
 .video-info {
@@ -882,158 +903,6 @@ a {
   color: #888;
 }
 
-/* ===== ASESMEN & PENILAIAN ===== */
-.asesmen-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-bottom: 32px;
-}
-
-.asesmen-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  border-left: 4px solid;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: all 0.2s;
-}
-
-.asesmen-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.asesmen-formatif {
-  border-left-color: #4caf50;
-  background: linear-gradient(to right, rgba(76, 175, 80, 0.03), transparent);
-}
-.asesmen-sumatif {
-  border-left-color: #ff9800;
-  background: linear-gradient(to right, rgba(255, 152, 0, 0.03), transparent);
-}
-
-.asesmen-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.asesmen-header h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-  color: #1a2e1a;
-}
-
-.asesmen-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: #f0f0f0;
-  color: #666;
-  white-space: nowrap;
-}
-
-.asesmen-formatif .asesmen-badge {
-  background: #e8f5e9;
-  color: #2e7d32;
-}
-.asesmen-sumatif .asesmen-badge {
-  background: #fff3e0;
-  color: #e65100;
-}
-
-.asesmen-content {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.asesmen-content p {
-  margin-bottom: 10px;
-}
-.asesmen-content strong {
-  color: #1a2e1a;
-}
-.asesmen-content ul {
-  margin: 8px 0 10px 20px;
-  padding: 0;
-}
-.asesmen-content li {
-  margin-bottom: 6px;
-  color: #555;
-}
-
-/* ===== TUGAS/LATIHAN ===== */
-.tugas-list {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.tugas-item {
-  background: #fff;
-  border-radius: 12px;
-  padding: 16px;
-  border: 1.5px solid #e8f5e9;
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 16px;
-  align-items: flex-start;
-  transition: all 0.2s;
-}
-
-.tugas-item:hover {
-  border-color: #a5d6a7;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.tugas-nomor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #2d6a2d;
-  color: #fff;
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 16px;
-  flex-shrink: 0;
-}
-
-.tugas-detail {
-}
-.tugas-detail strong {
-  display: block;
-  font-size: 15px;
-  color: #1b5e20;
-  margin-bottom: 6px;
-}
-
-.tugas-detail p {
-  margin: 0 0 8px 0;
-  font-size: 13px;
-  color: #666;
-  line-height: 1.5;
-}
-
-.tugas-tipe {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: #e8f5e9;
-  color: #2e7d32;
-}
-
 /* ===== FOOTER ===== */
 .footer {
   background: #1b5e20;
@@ -1044,682 +913,49 @@ a {
   margin-top: 48px;
 }
 
-/* ===== YOUTUBE RESPONSIVE CONTAINER ===== */
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* ===== SOFT ICON STYLING ===== */
-.card-icon,
-.emoji,
-.suara-card .emoji {
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transition: all 0.3s ease;
-}
-
-.card:hover .card-icon {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) brightness(1.1);
-  transform: scale(1.1);
-}
-
-.suara-card:hover .emoji,
-.suara-card.playing .emoji {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) brightness(1.15);
-  transform: scale(1.15);
-}
-
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .section {
-    padding: 32px 20px;
-  }
-  .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-  }
-  .video-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    padding: 24px 16px;
-  }
-  .suara-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
-    padding: 24px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0 16px;
-    height: 50px;
-  }
-  .logo {
-    font-size: 16px;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 24px 16px;
-    text-align: center;
-    gap: 20px;
-  }
-  .hero-content {
-    flex: 1;
-  }
-  .hero-image {
-    display: none;
-  }
-  .hero h1 {
-    font-size: 26px;
-    margin-bottom: 8px;
-  }
-  .hero p {
-    font-size: 14px;
-    max-width: 100%;
-  }
-  .hero-chips {
-    justify-content: center;
-    gap: 6px;
-  }
-  .chip {
-    font-size: 12px;
-    padding: 4px 12px;
-  }
-  .btn-primary {
-    font-size: 14px;
-    padding: 10px 24px;
-  }
-
-  .section {
-    padding: 24px 16px;
-  }
-  .section-title {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 10px;
-  }
-  .card {
-    padding: 16px 12px;
-  }
-  .card-icon {
-    font-size: 28px;
-  }
-  .card h3 {
-    font-size: 13px;
-  }
-  .card p {
-    font-size: 11px;
-  }
-
-  .page-header {
-    padding: 24px 16px;
-  }
-  .page-header h1 {
-    font-size: 22px;
-  }
-  .page-header p {
-    font-size: 13px;
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 20px 12px;
-  }
-  .video-card {
-    border-radius: 12px;
-  }
-  .video-info {
-    padding: 12px 14px;
-  }
-  .video-info h3 {
-    font-size: 13px;
-  }
-  .video-info p {
-    font-size: 11px;
-  }
-
-  .kuis-container {
-    padding: 0 16px;
-    margin: 24px auto;
-  }
-  .kuis-box {
-    padding: 20px;
-    border-radius: 16px;
-  }
-  .kuis-question {
-    font-size: 16px;
-  }
-  .kuis-question .emoji {
-    font-size: 40px;
-  }
-  .options-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .option-btn {
-    padding: 12px 10px;
-    font-size: 14px;
-  }
-
-  .game-container {
-    padding: 0 16px;
-    margin: 24px auto;
-  }
-  .game-board {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .drag-source h3,
-  .drop-target h3 {
-    font-size: 13px;
-  }
-  .draggable-item {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-  .drop-zone {
-    padding: 12px 14px;
-    min-height: 48px;
-  }
-
-  .flashcard-container {
-    padding: 0 16px;
-    margin: 24px auto;
-  }
-  .flashcard-wrapper {
-    height: 280px;
-    margin-bottom: 20px;
-  }
-  .card-front .animal-emoji {
-    font-size: 80px;
-  }
-  .card-front .animal-name {
-    font-size: 18px;
-  }
-  .card-back .animal-info {
-    font-size: 14px;
-  }
-  .btn-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-
-  .suara-grid {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 12px;
-    padding: 20px 12px;
-  }
-  .suara-card {
-    padding: 16px 10px;
-    border-radius: 12px;
-  }
-  .suara-card .emoji {
-    font-size: 40px;
-  }
-  .suara-card .nama {
-    font-size: 12px;
-  }
-
-  .penilaian-container {
-    padding: 0 16px;
-  }
-  .asesmen-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-  .asesmen-card {
-    padding: 16px;
-  }
-  .asesmen-header {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .asesmen-header h3 {
-    font-size: 15px;
-  }
-  .asesmen-badge {
-    font-size: 10px;
-  }
-  .asesmen-content {
-    font-size: 13px;
-  }
-  .asesmen-content li {
-    margin-bottom: 4px;
-  }
-
-  .tugas-list {
-    gap: 12px;
-  }
-  .tugas-item {
-    grid-template-columns: 36px 1fr;
-    gap: 12px;
-    padding: 14px;
-  }
-  .tugas-nomor {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-  }
-  .tugas-detail strong {
-    font-size: 14px;
-  }
-  .tugas-detail p {
-    font-size: 12px;
-    margin-bottom: 6px;
-  }
-  .tugas-tipe {
-    font-size: 10px;
-  }
-
-  .keterangan-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  .ket-card {
-    padding: 12px;
-  }
-  .ket-card .ket-kode {
-    font-size: 18px;
-  }
-  .ket-card .ket-label {
-    font-size: 10px;
-  }
-
-  .nilai-table th,
-  .nilai-table td {
-    padding: 10px 12px;
-    font-size: 12px;
-  }
-
-  .tujuan-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .tujuan-item {
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-
-  .footer {
-    font-size: 11px;
-    padding: 16px;
-  }
-}
-
 @media (max-width: 640px) {
-  .navbar {
-    padding: 0 12px;
-    height: 48px;
-  }
-  .logo {
-    font-size: 15px;
-    letter-spacing: 0;
-  }
   .nav-links {
     display: none;
   }
   .hamburger {
     display: block;
-    font-size: 20px;
   }
   .nav-links.open {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 48px;
+    top: 56px;
     left: 0;
     right: 0;
     background: #2d6a2d;
-    padding: 12px 16px;
+    padding: 12px 24px;
     gap: 4px;
     z-index: 99;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .nav-links a {
-    padding: 8px 12px;
-    font-size: 13px;
   }
 
   .hero {
-    padding: 20px 12px;
-    gap: 16px;
+    flex-direction: column;
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .hero-image {
+    display: none;
   }
   .hero h1 {
-    font-size: 22px;
-  }
-  .hero p {
-    font-size: 13px;
+    font-size: 24px;
   }
   .hero-chips {
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-  .chip {
-    font-size: 11px;
-    padding: 4px 10px;
-  }
-  .btn-primary {
-    font-size: 13px;
-    padding: 10px 20px;
+    justify-content: center;
   }
 
-  .section {
-    padding: 20px 12px;
-  }
-  .section-title {
-    font-size: 18px;
-    margin-bottom: 16px;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 8px;
-  }
-  .card {
-    padding: 14px 10px;
-    border-radius: 12px;
-  }
-  .card-icon {
-    font-size: 24px;
-    margin-bottom: 6px;
-  }
-  .card h3 {
-    font-size: 12px;
-  }
-  .card p {
-    font-size: 10px;
-  }
-  .tag {
-    font-size: 9px;
-    padding: 2px 8px;
-  }
-
-  .page-header {
-    padding: 20px 12px;
-  }
-  .page-header h1 {
-    font-size: 20px;
-    margin-bottom: 6px;
-  }
-  .page-header p {
-    font-size: 12px;
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 16px 10px;
-  }
-  .video-card {
-    border-radius: 10px;
-    border: 1px solid #e0e0e0;
-  }
-  .video-card .video-container {
-    border-radius: 10px;
-  }
-  .video-info {
-    padding: 10px 12px;
-  }
-  .video-info h3 {
-    font-size: 12px;
-    margin-bottom: 4px;
-  }
-  .video-info p {
-    font-size: 10px;
-  }
-
-  .kuis-container {
-    padding: 0 12px;
-    margin: 16px auto;
-    max-width: 100%;
-  }
-  .kuis-box {
-    padding: 16px;
-    border-radius: 14px;
-    border: 1.5px solid #ffcc80;
-  }
-  .kuis-question {
-    font-size: 15px;
-    margin-bottom: 16px;
-  }
-  .kuis-question .emoji {
-    font-size: 36px;
-    margin-bottom: 8px;
-  }
   .options-grid {
     grid-template-columns: 1fr;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-  .option-btn {
-    padding: 10px 8px;
-    font-size: 13px;
-    border-radius: 10px;
-  }
-  .btn-next {
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  .game-container {
-    padding: 0 12px;
-    margin: 16px auto;
-  }
-  .game-instructions {
-    padding: 12px 14px;
-    font-size: 13px;
   }
   .game-board {
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-  .drag-source h3,
-  .drop-target h3 {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  .draggable-item {
-    padding: 10px 10px;
-    font-size: 13px;
-    margin-bottom: 6px;
-    gap: 8px;
-  }
-  .drop-zone {
-    padding: 10px 12px;
-    min-height: 44px;
-    margin-bottom: 6px;
-    font-size: 13px;
-  }
-  .btn-check-game {
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  .flashcard-container {
-    padding: 0 12px;
-    margin: 16px auto;
-  }
-  .flashcard-wrapper {
-    height: 260px;
-    margin-bottom: 16px;
-  }
-  .card-front .animal-emoji {
-    font-size: 72px;
-    margin-bottom: 8px;
-  }
-  .card-front .animal-name {
-    font-size: 16px;
-  }
-  .card-back .animal-info {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-  .flashcard-hint {
-    font-size: 11px;
-    margin-bottom: 12px;
-  }
-  .btn-nav {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-    border: 2px solid #a5d6a7;
-  }
-  .flashcard-counter {
-    font-size: 13px;
-  }
-
-  .suara-grid {
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 8px;
-    padding: 16px 10px;
-  }
-  .suara-card {
-    padding: 12px 8px;
-    border-radius: 10px;
-    border: 2px solid #ef9a9a;
-  }
-  .suara-card .emoji {
-    font-size: 36px;
-    margin-bottom: 6px;
-  }
-  .suara-card .nama {
-    font-size: 11px;
-  }
-  .suara-card .suara-text {
-    font-size: 10px;
-  }
-
-  .penilaian-container {
-    padding: 0 12px;
-    margin: 16px auto;
-  }
-  .asesmen-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 20px;
   }
-  .asesmen-card {
-    padding: 14px;
-    border-left-width: 3px;
-  }
-  .asesmen-header {
-    gap: 6px;
-  }
-  .asesmen-header h3 {
-    font-size: 14px;
-  }
-  .asesmen-badge {
-    font-size: 9px;
-    padding: 3px 8px;
-  }
-  .asesmen-content {
-    font-size: 12px;
-  }
-  .asesmen-content p {
-    margin-bottom: 6px;
-  }
-  .asesmen-content ul {
-    margin: 6px 0 8px 18px;
-  }
-  .asesmen-content li {
-    margin-bottom: 3px;
-    font-size: 12px;
-  }
-
-  .tugas-list {
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .tugas-item {
-    grid-template-columns: 32px 1fr;
-    gap: 10px;
-    padding: 12px;
-  }
-  .tugas-nomor {
-    width: 32px;
-    height: 32px;
-    font-size: 13px;
-  }
-  .tugas-detail strong {
-    font-size: 13px;
-    margin-bottom: 4px;
-  }
-  .tugas-detail p {
-    font-size: 11px;
-    margin-bottom: 4px;
-  }
-  .tugas-tipe {
-    font-size: 9px;
-  }
-
   .keterangan-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-  .ket-card {
-    padding: 10px;
-    border-radius: 8px;
-  }
-  .ket-card .ket-kode {
-    font-size: 16px;
-    margin-bottom: 2px;
-  }
-  .ket-card .ket-label {
-    font-size: 9px;
-  }
-
-  .nilai-table {
-    margin-bottom: 16px;
-  }
-  .nilai-table th,
-  .nilai-table td {
-    padding: 8px 10px;
-    font-size: 11px;
-  }
-  .nilai-table th {
-    font-size: 11px;
-  }
-
-  .tujuan-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .tujuan-item {
-    padding: 10px 12px;
-    font-size: 12px;
-  }
-
-  .footer {
-    font-size: 10px;
-    padding: 12px;
-  }
-
-  .badge {
-    font-size: 11px;
-    padding: 3px 10px;
   }
 }
